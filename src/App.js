@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { CSSTransition } from "react-transition-group";
+
 import "./App.css";
+import DisplayComp from "./DisplayComp";
 
 class App extends Component {
   state = {
@@ -23,24 +24,7 @@ class App extends Component {
             Toggle Element
           </button>
         )}
-        <CSSTransition
-          in={this.state.showList}
-          timeout={400}
-          classNames="fade"
-          unmountOnExit
-          appear
-          onEntered={this.switch}
-          onExit={this.switch}
-        >
-          <div className="container-inner">
-            <h1>I Appear and Disappear</h1>
-            <div className="spacer10" />
-            <button className="display" onClick={this.toggle}>
-              Toggle Element
-            </button>
-            <div className="spacer10" />
-          </div>
-        </CSSTransition>
+        <DisplayComp toggle={this.toggle} showList={this.state.showList} />
       </div>
     );
   }
