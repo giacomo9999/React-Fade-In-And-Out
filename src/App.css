@@ -61,7 +61,7 @@ h4 {
   padding: 10px;
   margin: 20px auto 10px;
   /* background color 5 */
-  background-color: #6c7a89;
+  /* background-color: #6c7a89; */
   border-radius: 5px;
 }
 
@@ -215,38 +215,43 @@ button {
 /* Transitions */
 
 /* This fires as soon as the element enters the DOM */
-.list-transition-enter,
-.list-transition-appear {
-  /*We give the list the initial dimension of the list button*/
-  top: 0;
+.fade-enter,
+.fade-appear {
+  opacity: 0;
+  /* max-height: 0px;  */
+  /* top: 0;
   width: 120px;
-  max-height: 40px;
-  color: transparent;
-  background-color: #5a564c;
+  */
+  /* color: transparent; */
+  /* background-color: #5a564c; */
 }
 /* This is where we can add the transition*/
-.list-transition-enter-active,
-.list-transition-appear-active {
-  top: 45px;
+.fade-enter-active,
+.fade-appear-active {
+  opacity: 1;
+  /* top: 45px;
   width: 200px;
-  max-height: 200px;
-  background-color: #9e8949;
+  max-height: 200px; */
+  /* background-color: #9e8949; */
   transition: all 400ms;
 }
 
 /* This fires as soon as the this.state.showList is false */
-.list-transition-exit {
-  top: 45px;
+.fade-exit {
+  opacity: 1;
+  /* top: 45px;
   width: 200px;
-  max-height: 200px;
-  background-color: #9e8949;
+  max-height: 200px; */
+  /* background-color: #9e8949; */
 }
 /* fires as element leaves the DOM*/
-.list-transition-exit-active {
-  top: 0;
+.fade-exit-active {
+  opacity: 0;
+  /* max-height: 0px; */
+  /* top: 0;
   width: 120px;
-  max-height: 40px;
-  color: transparent;
-  background-color: #5a564c;
+   */
+  /* color: transparent;
+  background-color: #5a564c; */
   transition: all 400ms;
 }
