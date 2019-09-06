@@ -10,8 +10,8 @@ class DisplayComp extends Component {
         classNames="fade"
         unmountOnExit
         appear
-        onEntered={this.switch}
-        onExit={this.switch}
+        // onEntered={this.switch}
+        // onExit={this.switch}
       >
         <div className="container-inner">
           <h1>I Appear and Disappear</h1>
